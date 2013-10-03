@@ -1,4 +1,4 @@
-#AOHome - Out of the box dashboard application
+#AOHome - Out of the box home application
 
 AOHome is under MIT Licence so if you find it helpful just use it !
 
