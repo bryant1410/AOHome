@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F37B87AD17FDAC2700E9D13F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87AC17FDAC2700E9D13F /* Foundation.framework */; };
+		F37B87AF17FDAC2700E9D13F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87AE17FDAC2700E9D13F /* CoreGraphics.framework */; };
+		F37B87B117FDAC2700E9D13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87B017FDAC2700E9D13F /* UIKit.framework */; };
+		F37B87B717FDAC2700E9D13F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B87B517FDAC2700E9D13F /* InfoPlist.strings */; };
+		F37B87B917FDAC2700E9D13F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B87B817FDAC2700E9D13F /* main.m */; };
+		F37B87BD17FDAC2700E9D13F /* AOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B87BC17FDAC2700E9D13F /* AOAppDelegate.m */; };
+		F37B87BF17FDAC2700E9D13F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37B87BE17FDAC2700E9D13F /* Images.xcassets */; };
+		F37B87C617FDAC2700E9D13F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87C517FDAC2700E9D13F /* XCTest.framework */; };
+		F37B87C717FDAC2700E9D13F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87AC17FDAC2700E9D13F /* Foundation.framework */; };
+		F37B87C817FDAC2700E9D13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87B017FDAC2700E9D13F /* UIKit.framework */; };
+		F37B87D017FDAC2700E9D13F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B87CE17FDAC2700E9D13F /* InfoPlist.strings */; };
+		F37B87D217FDAC2700E9D13F /* AOHomeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B87D117FDAC2700E9D13F /* AOHomeDemoTests.m */; };
+		F37B881617FDAF2400E9D13F /* bg_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F417FDAF2300E9D13F /* bg_1.jpg */; };
+		F37B881717FDAF2400E9D13F /* bg_1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F517FDAF2300E9D13F /* bg_1@2x.jpg */; };
+		F37B881817FDAF2400E9D13F /* bg_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F617FDAF2300E9D13F /* bg_2.jpg */; };
+		F37B881917FDAF2400E9D13F /* bg_2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F717FDAF2300E9D13F /* bg_2@2x.jpg */; };
+		F37B881A17FDAF2400E9D13F /* bg_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F817FDAF2300E9D13F /* bg_3.jpg */; };
+		F37B881B17FDAF2400E9D13F /* bg_3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87F917FDAF2300E9D13F /* bg_3@2x.jpg */; };
+		F37B881C17FDAF2400E9D13F /* bg_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FA17FDAF2300E9D13F /* bg_4.jpg */; };
+		F37B881D17FDAF2400E9D13F /* bg_4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FB17FDAF2300E9D13F /* bg_4@2x.jpg */; };
+		F37B881E17FDAF2400E9D13F /* bg_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FC17FDAF2300E9D13F /* bg_5.jpg */; };
+		F37B881F17FDAF2400E9D13F /* bg_5@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FD17FDAF2300E9D13F /* bg_5@2x.jpg */; };
+		F37B882017FDAF2400E9D13F /* defaultProfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FE17FDAF2300E9D13F /* defaultProfil.png */; };
+		F37B882117FDAF2400E9D13F /* defaultProfil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FF17FDAF2300E9D13F /* defaultProfil@2x.png */; };
+		F37B883417FDAFFE00E9D13F /* AOHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883217FDAFFD00E9D13F /* AOHomeController.m */; };
+		F37B883517FDAFFE00E9D13F /* AOHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37B883317FDAFFE00E9D13F /* AOHomeController.xib */; };
+		F37B883917FDB0C500E9D13F /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883817FDB0C500E9D13F /* AGMedallionView.m */; };
+		F37B883F17FDB36D00E9D13F /* AOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883D17FDB36D00E9D13F /* AOHomeViewController.m */; };
+		F37B884017FDB36D00E9D13F /* AOHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37B883E17FDB36D00E9D13F /* AOHomeViewController.xib */; };
+		F37B884317FDB7C600E9D13F /* tyrion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B884117FDB7C600E9D13F /* tyrion.jpg */; };
+		F37B884417FDB7C600E9D13F /* tyrion@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F37B884217FDB7C600E9D13F /* tyrion@2x.jpg */; };
+		F37B884617FDB9AA00E9D13F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F37B884517FDB9AA00E9D13F /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F37B87C917FDAC2700E9D13F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F37B87A117FDAC2700E9D13F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F37B87A817FDAC2700E9D13F;
+			remoteInfo = AOHomeDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F37B87A917FDAC2700E9D13F /* AOHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B87AC17FDAC2700E9D13F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F37B87AE17FDAC2700E9D13F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F37B87B017FDAC2700E9D13F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F37B87B417FDAC2700E9D13F /* AOHomeDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOHomeDemo-Info.plist"; sourceTree = "<group>"; };
+		F37B87B617FDAC2700E9D13F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F37B87B817FDAC2700E9D13F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F37B87BA17FDAC2700E9D13F /* AOHomeDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOHomeDemo-Prefix.pch"; sourceTree = "<group>"; };
+		F37B87BB17FDAC2700E9D13F /* AOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOAppDelegate.h; sourceTree = "<group>"; };
+		F37B87BC17FDAC2700E9D13F /* AOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOAppDelegate.m; sourceTree = "<group>"; };
+		F37B87BE17FDAC2700E9D13F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F37B87C417FDAC2700E9D13F /* AOHomeDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOHomeDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37B87C517FDAC2700E9D13F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F37B87CD17FDAC2700E9D13F /* AOHomeDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOHomeDemoTests-Info.plist"; sourceTree = "<group>"; };
+		F37B87CF17FDAC2700E9D13F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F37B87D117FDAC2700E9D13F /* AOHomeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOHomeDemoTests.m; sourceTree = "<group>"; };
+		F37B87F417FDAF2300E9D13F /* bg_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_1.jpg; sourceTree = "<group>"; };
+		F37B87F517FDAF2300E9D13F /* bg_1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_1@2x.jpg"; sourceTree = "<group>"; };
+		F37B87F617FDAF2300E9D13F /* bg_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_2.jpg; sourceTree = "<group>"; };
+		F37B87F717FDAF2300E9D13F /* bg_2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_2@2x.jpg"; sourceTree = "<group>"; };
+		F37B87F817FDAF2300E9D13F /* bg_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_3.jpg; sourceTree = "<group>"; };
+		F37B87F917FDAF2300E9D13F /* bg_3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_3@2x.jpg"; sourceTree = "<group>"; };
+		F37B87FA17FDAF2300E9D13F /* bg_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_4.jpg; sourceTree = "<group>"; };
+		F37B87FB17FDAF2300E9D13F /* bg_4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_4@2x.jpg"; sourceTree = "<group>"; };
+		F37B87FC17FDAF2300E9D13F /* bg_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_5.jpg; sourceTree = "<group>"; };
+		F37B87FD17FDAF2300E9D13F /* bg_5@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg_5@2x.jpg"; sourceTree = "<group>"; };
+		F37B87FE17FDAF2300E9D13F /* defaultProfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultProfil.png; sourceTree = "<group>"; };
+		F37B87FF17FDAF2300E9D13F /* defaultProfil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultProfil@2x.png"; sourceTree = "<group>"; };
+		F37B883117FDAFFD00E9D13F /* AOHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOHomeController.h; sourceTree = "<group>"; };
+		F37B883217FDAFFD00E9D13F /* AOHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOHomeController.m; sourceTree = "<group>"; };
+		F37B883317FDAFFE00E9D13F /* AOHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOHomeController.xib; sourceTree = "<group>"; };
+		F37B883717FDB0C500E9D13F /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
+		F37B883817FDB0C500E9D13F /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
+		F37B883C17FDB36D00E9D13F /* AOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOHomeViewController.h; sourceTree = "<group>"; };
+		F37B883D17FDB36D00E9D13F /* AOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOHomeViewController.m; sourceTree = "<group>"; };
+		F37B883E17FDB36D00E9D13F /* AOHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOHomeViewController.xib; sourceTree = "<group>"; };
+		F37B884117FDB7C600E9D13F /* tyrion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tyrion.jpg; sourceTree = "<group>"; };
+		F37B884217FDB7C600E9D13F /* tyrion@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tyrion@2x.jpg"; sourceTree = "<group>"; };
+		F37B884517FDB9AA00E9D13F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F37B87A617FDAC2700E9D13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B87AF17FDAC2700E9D13F /* CoreGraphics.framework in Frameworks */,
+				F37B87B117FDAC2700E9D13F /* UIKit.framework in Frameworks */,
+				F37B87AD17FDAC2700E9D13F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B87C117FDAC2700E9D13F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B87C617FDAC2700E9D13F /* XCTest.framework in Frameworks */,
+				F37B87C817FDAC2700E9D13F /* UIKit.framework in Frameworks */,
+				F37B87C717FDAC2700E9D13F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F37B87A017FDAC2700E9D13F = {
+			isa = PBXGroup;
+			children = (
+				F37B884517FDB9AA00E9D13F /* README.md */,
+				F37B87B217FDAC2700E9D13F /* AOHomeDemo */,
+				F37B87CB17FDAC2700E9D13F /* AOHomeDemoTests */,
+				F37B87AB17FDAC2700E9D13F /* Frameworks */,
+				F37B87AA17FDAC2700E9D13F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F37B87AA17FDAC2700E9D13F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87A917FDAC2700E9D13F /* AOHomeDemo.app */,
+				F37B87C417FDAC2700E9D13F /* AOHomeDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F37B87AB17FDAC2700E9D13F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87AC17FDAC2700E9D13F /* Foundation.framework */,
+				F37B87AE17FDAC2700E9D13F /* CoreGraphics.framework */,
+				F37B87B017FDAC2700E9D13F /* UIKit.framework */,
+				F37B87C517FDAC2700E9D13F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F37B87B217FDAC2700E9D13F /* AOHomeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87BB17FDAC2700E9D13F /* AOAppDelegate.h */,
+				F37B87BC17FDAC2700E9D13F /* AOAppDelegate.m */,
+				F37B883117FDAFFD00E9D13F /* AOHomeController.h */,
+				F37B883217FDAFFD00E9D13F /* AOHomeController.m */,
+				F37B883317FDAFFE00E9D13F /* AOHomeController.xib */,
+				F37B87EB17FDAF2300E9D13F /* Images */,
+				F37B87E717FDAE1B00E9D13F /* Vendor */,
+				F37B87B317FDAC2700E9D13F /* Supporting Files */,
+				F37B87BE17FDAC2700E9D13F /* Images.xcassets */,
+			);
+			path = AOHomeDemo;
+			sourceTree = "<group>";
+		};
+		F37B87B317FDAC2700E9D13F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87B417FDAC2700E9D13F /* AOHomeDemo-Info.plist */,
+				F37B87B517FDAC2700E9D13F /* InfoPlist.strings */,
+				F37B87B817FDAC2700E9D13F /* main.m */,
+				F37B87BA17FDAC2700E9D13F /* AOHomeDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F37B87CB17FDAC2700E9D13F /* AOHomeDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87D117FDAC2700E9D13F /* AOHomeDemoTests.m */,
+				F37B87CC17FDAC2700E9D13F /* Supporting Files */,
+			);
+			path = AOHomeDemoTests;
+			sourceTree = "<group>";
+		};
+		F37B87CC17FDAC2700E9D13F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87CD17FDAC2700E9D13F /* AOHomeDemoTests-Info.plist */,
+				F37B87CE17FDAC2700E9D13F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F37B87E717FDAE1B00E9D13F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F37B883B17FDB36D00E9D13F /* AOHomeController */,
+				F37B883617FDB0C500E9D13F /* AGMedallionView */,
+			);
+			name = Vendor;
+			path = AGMedallionView;
+			sourceTree = SOURCE_ROOT;
+		};
+		F37B87EB17FDAF2300E9D13F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F37B87F417FDAF2300E9D13F /* bg_1.jpg */,
+				F37B87F517FDAF2300E9D13F /* bg_1@2x.jpg */,
+				F37B87F617FDAF2300E9D13F /* bg_2.jpg */,
+				F37B87F717FDAF2300E9D13F /* bg_2@2x.jpg */,
+				F37B87F817FDAF2300E9D13F /* bg_3.jpg */,
+				F37B87F917FDAF2300E9D13F /* bg_3@2x.jpg */,
+				F37B87FA17FDAF2300E9D13F /* bg_4.jpg */,
+				F37B87FB17FDAF2300E9D13F /* bg_4@2x.jpg */,
+				F37B87FC17FDAF2300E9D13F /* bg_5.jpg */,
+				F37B87FD17FDAF2300E9D13F /* bg_5@2x.jpg */,
+				F37B87FE17FDAF2300E9D13F /* defaultProfil.png */,
+				F37B87FF17FDAF2300E9D13F /* defaultProfil@2x.png */,
+				F37B884117FDB7C600E9D13F /* tyrion.jpg */,
+				F37B884217FDB7C600E9D13F /* tyrion@2x.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F37B883617FDB0C500E9D13F /* AGMedallionView */ = {
+			isa = PBXGroup;
+			children = (
+				F37B883717FDB0C500E9D13F /* AGMedallionView.h */,
+				F37B883817FDB0C500E9D13F /* AGMedallionView.m */,
+			);
+			name = AGMedallionView;
+			path = src/AGMedallionView;
+			sourceTree = SOURCE_ROOT;
+		};
+		F37B883B17FDB36D00E9D13F /* AOHomeController */ = {
+			isa = PBXGroup;
+			children = (
+				F37B883C17FDB36D00E9D13F /* AOHomeViewController.h */,
+				F37B883D17FDB36D00E9D13F /* AOHomeViewController.m */,
+				F37B883E17FDB36D00E9D13F /* AOHomeViewController.xib */,
+			);
+			name = AOHomeController;
+			path = src/AOHomeController;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F37B87A817FDAC2700E9D13F /* AOHomeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37B87D517FDAC2700E9D13F /* Build configuration list for PBXNativeTarget "AOHomeDemo" */;
+			buildPhases = (
+				F37B87A517FDAC2700E9D13F /* Sources */,
+				F37B87A617FDAC2700E9D13F /* Frameworks */,
+				F37B87A717FDAC2700E9D13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AOHomeDemo;
+			productName = AOHomeDemo;
+			productReference = F37B87A917FDAC2700E9D13F /* AOHomeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F37B87C317FDAC2700E9D13F /* AOHomeDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37B87D817FDAC2700E9D13F /* Build configuration list for PBXNativeTarget "AOHomeDemoTests" */;
+			buildPhases = (
+				F37B87C017FDAC2700E9D13F /* Sources */,
+				F37B87C117FDAC2700E9D13F /* Frameworks */,
+				F37B87C217FDAC2700E9D13F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F37B87CA17FDAC2700E9D13F /* PBXTargetDependency */,
+			);
+			name = AOHomeDemoTests;
+			productName = AOHomeDemoTests;
+			productReference = F37B87C417FDAC2700E9D13F /* AOHomeDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F37B87A117FDAC2700E9D13F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AO;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Appsido;
+				TargetAttributes = {
+					F37B87C317FDAC2700E9D13F = {
+						TestTargetID = F37B87A817FDAC2700E9D13F;
+					};
+				};
+			};
+			buildConfigurationList = F37B87A417FDAC2700E9D13F /* Build configuration list for PBXProject "AOHomeDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F37B87A017FDAC2700E9D13F;
+			productRefGroup = F37B87AA17FDAC2700E9D13F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F37B87A817FDAC2700E9D13F /* AOHomeDemo */,
+				F37B87C317FDAC2700E9D13F /* AOHomeDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F37B87A717FDAC2700E9D13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B881917FDAF2400E9D13F /* bg_2@2x.jpg in Resources */,
+				F37B881D17FDAF2400E9D13F /* bg_4@2x.jpg in Resources */,
+				F37B884017FDB36D00E9D13F /* AOHomeViewController.xib in Resources */,
+				F37B883517FDAFFE00E9D13F /* AOHomeController.xib in Resources */,
+				F37B87B717FDAC2700E9D13F /* InfoPlist.strings in Resources */,
+				F37B881817FDAF2400E9D13F /* bg_2.jpg in Resources */,
+				F37B882117FDAF2400E9D13F /* defaultProfil@2x.png in Resources */,
+				F37B881E17FDAF2400E9D13F /* bg_5.jpg in Resources */,
+				F37B881C17FDAF2400E9D13F /* bg_4.jpg in Resources */,
+				F37B881F17FDAF2400E9D13F /* bg_5@2x.jpg in Resources */,
+				F37B881A17FDAF2400E9D13F /* bg_3.jpg in Resources */,
+				F37B881717FDAF2400E9D13F /* bg_1@2x.jpg in Resources */,
+				F37B881617FDAF2400E9D13F /* bg_1.jpg in Resources */,
+				F37B884617FDB9AA00E9D13F /* README.md in Resources */,
+				F37B881B17FDAF2400E9D13F /* bg_3@2x.jpg in Resources */,
+				F37B882017FDAF2400E9D13F /* defaultProfil.png in Resources */,
+				F37B884417FDB7C600E9D13F /* tyrion@2x.jpg in Resources */,
+				F37B884317FDB7C600E9D13F /* tyrion.jpg in Resources */,
+				F37B87BF17FDAC2700E9D13F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B87C217FDAC2700E9D13F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B87D017FDAC2700E9D13F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F37B87A517FDAC2700E9D13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B883917FDB0C500E9D13F /* AGMedallionView.m in Sources */,
+				F37B883F17FDB36D00E9D13F /* AOHomeViewController.m in Sources */,
+				F37B883417FDAFFE00E9D13F /* AOHomeController.m in Sources */,
+				F37B87BD17FDAC2700E9D13F /* AOAppDelegate.m in Sources */,
+				F37B87B917FDAC2700E9D13F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F37B87C017FDAC2700E9D13F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B87D217FDAC2700E9D13F /* AOHomeDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F37B87CA17FDAC2700E9D13F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F37B87A817FDAC2700E9D13F /* AOHomeDemo */;
+			targetProxy = F37B87C917FDAC2700E9D13F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F37B87B517FDAC2700E9D13F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F37B87B617FDAC2700E9D13F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F37B87CE17FDAC2700E9D13F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F37B87CF17FDAC2700E9D13F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F37B87D317FDAC2700E9D13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F37B87D417FDAC2700E9D13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F37B87D617FDAC2700E9D13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOHomeDemo/AOHomeDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOHomeDemo/AOHomeDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F37B87D717FDAC2700E9D13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOHomeDemo/AOHomeDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOHomeDemo/AOHomeDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F37B87D917FDAC2700E9D13F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AOHomeDemo.app/AOHomeDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOHomeDemo/AOHomeDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AOHomeDemoTests/AOHomeDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F37B87DA17FDAC2700E9D13F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AOHomeDemo.app/AOHomeDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOHomeDemo/AOHomeDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOHomeDemoTests/AOHomeDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F37B87A417FDAC2700E9D13F /* Build configuration list for PBXProject "AOHomeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B87D317FDAC2700E9D13F /* Debug */,
+				F37B87D417FDAC2700E9D13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37B87D517FDAC2700E9D13F /* Build configuration list for PBXNativeTarget "AOHomeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B87D617FDAC2700E9D13F /* Debug */,
+				F37B87D717FDAC2700E9D13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37B87D817FDAC2700E9D13F /* Build configuration list for PBXNativeTarget "AOHomeDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F37B87D917FDAC2700E9D13F /* Debug */,
+				F37B87DA17FDAC2700E9D13F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F37B87A117FDAC2700E9D13F /* Project object */;
+}
