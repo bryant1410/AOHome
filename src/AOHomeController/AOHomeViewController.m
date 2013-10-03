@@ -52,7 +52,7 @@
 
 @implementation AOMedallionView
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
@@ -101,7 +101,7 @@
 
 @implementation AOHomeViewController
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
@@ -114,7 +114,7 @@
     return self;
 }
 
-- (id)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images
+- (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images
 {
     self = [self init];
     if (self)

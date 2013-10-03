@@ -66,7 +66,7 @@
  * @return AOHomeViewController
  */
 
-- (id)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images;
+- (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images;
 
 /**
  * Add a medallion 
