@@ -1,4 +1,4 @@
-#AOHome - simple tag implementation
+#AOHome - Out of the box dashboard application
 
 AOHome is under MIT Licence so if you find it helpful just use it !
 
