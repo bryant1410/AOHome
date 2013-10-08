@@ -4,7 +4,7 @@ AOHome is under MIT Licence so if you find it helpful just use it !
 
 ###**AOHomeDemo**
 
-This project add/remove tag with image and title inside a tag list view. When user tap on a tag, it's removed from the view. Please see the sample project for more.
+This project help create clean application home view controller with block based animation for background images. You can also choose between NSBundle images or distant images with placeholder while image being downloaded.
 
 The AOMedallionView inherit from AGMedallionView library to add user interaction and delegate method available.
 
