@@ -32,9 +32,21 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    AOHomeController *vc = [[AOHomeController alloc] initWithPanDuration:7.0f
+    /*
+     * NSBundle background images
+     *
+     AOHomeController *vc = [[AOHomeController alloc] initWithPanDuration:7.0f
                                                              withPanSize:10
                                                      andBackgroundImages:@[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg", @"bg_4.jpg", @"bg_5.jpg"]];
+     */
+    
+    /*
+     * Distant background images
+     */
+     AOHomeController *vc = [[AOHomeController alloc] initWithPanDuration:7.0f
+                                                             withPanSize:10
+                                                     andDistantBackgroundImages:@[@"http://www.hdwallpapersart.com/wp-content/uploads/2013/06/rainy-paris-iphone-5-wallpaper.jpg", @"http://cdn.crazyleafdesign.com/blog/wp-content/uploads/2012/10/iphone-5-wallpaper-rain-drops.jpg", @"http://blogigoldhouse.com/wp-content/uploads/2012/12/Abstract-iPhone-5-wallpaper-igoldhouse.com_.jpg"]
+                                                            withPlaceholder:@[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg"]];
     
     [self.window setRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];

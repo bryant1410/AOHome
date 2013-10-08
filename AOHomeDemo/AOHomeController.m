@@ -83,4 +83,14 @@
     NSLog(@"Medallion profile touched up! > %@", userInfo);
 }
 
+- (void)backgroundImageDidLoad:(AOHomeViewController *)bgImage
+{
+    NSLog(@"background image did load");
+}
+
+- (void)backgroundImageDidFailLoad:(AOHomeViewController *)bgImage withError:(NSError *)error
+{
+    NSLog(@"background image load did fail with error > %@", error);
+}
+
 @end

@@ -25,6 +25,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AGMedallionView.h"
+#import "EGOImageView.h"
+
+@class AOHomeViewController;
 
 @interface UIImage (AOImageCategory)
 
@@ -33,6 +36,22 @@
 @end
 
 @protocol AOHomeViewControllerDelegate <NSObject>
+
+@optional
+
+/**
+ * Called when a distant background image did load
+ */
+
+- (void)backgroundImageDidLoad:(AOHomeViewController *)bgImage;
+
+/**
+ * Called when a distant background image did fail load
+ */
+
+- (void)backgroundImageDidFailLoad:(AOHomeViewController *)bgImage withError:(NSError *)error;
+
+@required
 
 /**
  * Called when a new profile medallion is being tapped
@@ -48,7 +67,7 @@
 
 @end
 
-@interface AOHomeViewController : UIViewController
+@interface AOHomeViewController : UIViewController <EGOImageViewDelegate>
 
 /**
  * Scroll view that hold all defined background images
@@ -67,6 +86,19 @@
  */
 
 - (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images;
+
+/**
+ * Custom init method to create a new AOHomeViewController object
+ *
+ * @param NSTimeInterval background image pan effect duration
+ * @param NSUInteger background image pan effect size
+ * @param NSArray collection of distant background images NSURL (ie. @[@"http://www.flickr.com/photos/uberdogleg/10141188454/in/explore-2013-10-07", @"http://www.flickr.com/photos/johnhemphoto/10138801736/in/explore-2013-10-07", @"http://www.flickr.com/photos/cherco/10134978246/in/explore-2013-10-07"])
+ * @param NSArray collection of plaholder images defined with images bundle name (ie. @[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg"])
+ *
+ * @return AOHomeViewController
+ */
+
+- (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andDistantBackgroundImages:(NSArray *)images withPlaceholder:(NSArray *)placeholders;
 
 /**
  * Add a medallion 

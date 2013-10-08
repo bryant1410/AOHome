@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3249C4F1803EDEF00BF9E04 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F3249C3A1803EDEF00BF9E04 /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3249C501803EDEF00BF9E04 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3249C3D1803EDEF00BF9E04 /* EGOImageButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3249C511803EDEF00BF9E04 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F3249C401803EDEF00BF9E04 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3249C521803EDEF00BF9E04 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3249C421803EDEF00BF9E04 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F3249C531803EDEF00BF9E04 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3249C451803EDEF00BF9E04 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F37B87AD17FDAC2700E9D13F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87AC17FDAC2700E9D13F /* Foundation.framework */; };
 		F37B87AF17FDAC2700E9D13F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87AE17FDAC2700E9D13F /* CoreGraphics.framework */; };
 		F37B87B117FDAC2700E9D13F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B87B017FDAC2700E9D13F /* UIKit.framework */; };
@@ -52,6 +57,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3249C391803EDEF00BF9E04 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		F3249C3A1803EDEF00BF9E04 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		F3249C3C1803EDEF00BF9E04 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		F3249C3D1803EDEF00BF9E04 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		F3249C3F1803EDEF00BF9E04 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		F3249C401803EDEF00BF9E04 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		F3249C411803EDEF00BF9E04 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		F3249C421803EDEF00BF9E04 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		F3249C441803EDEF00BF9E04 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		F3249C451803EDEF00BF9E04 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		F37B87A917FDAC2700E9D13F /* AOHomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOHomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B87AC17FDAC2700E9D13F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F37B87AE17FDAC2700E9D13F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +132,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3249C251803EDEF00BF9E04 /* EGOImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				F3249C381803EDEF00BF9E04 /* EGOCache */,
+				F3249C3B1803EDEF00BF9E04 /* EGOImageButton */,
+				F3249C3E1803EDEF00BF9E04 /* EGOImageLoader */,
+				F3249C431803EDEF00BF9E04 /* EGOImageView */,
+			);
+			name = EGOImageLoading;
+			path = src/EGOImageLoading;
+			sourceTree = SOURCE_ROOT;
+		};
+		F3249C381803EDEF00BF9E04 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				F3249C391803EDEF00BF9E04 /* EGOCache.h */,
+				F3249C3A1803EDEF00BF9E04 /* EGOCache.m */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		F3249C3B1803EDEF00BF9E04 /* EGOImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				F3249C3C1803EDEF00BF9E04 /* EGOImageButton.h */,
+				F3249C3D1803EDEF00BF9E04 /* EGOImageButton.m */,
+			);
+			path = EGOImageButton;
+			sourceTree = "<group>";
+		};
+		F3249C3E1803EDEF00BF9E04 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				F3249C3F1803EDEF00BF9E04 /* EGOImageLoadConnection.h */,
+				F3249C401803EDEF00BF9E04 /* EGOImageLoadConnection.m */,
+				F3249C411803EDEF00BF9E04 /* EGOImageLoader.h */,
+				F3249C421803EDEF00BF9E04 /* EGOImageLoader.m */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		F3249C431803EDEF00BF9E04 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F3249C441803EDEF00BF9E04 /* EGOImageView.h */,
+				F3249C451803EDEF00BF9E04 /* EGOImageView.m */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
 		F37B87A017FDAC2700E9D13F = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +263,7 @@
 			children = (
 				F37B883B17FDB36D00E9D13F /* AOHomeController */,
 				F37B883617FDB0C500E9D13F /* AGMedallionView */,
+				F3249C251803EDEF00BF9E04 /* EGOImageLoading */,
 			);
 			name = Vendor;
 			path = AGMedallionView;
@@ -360,8 +426,13 @@
 			files = (
 				F37B883917FDB0C500E9D13F /* AGMedallionView.m in Sources */,
 				F37B883F17FDB36D00E9D13F /* AOHomeViewController.m in Sources */,
+				F3249C4F1803EDEF00BF9E04 /* EGOCache.m in Sources */,
+				F3249C511803EDEF00BF9E04 /* EGOImageLoadConnection.m in Sources */,
 				F37B883417FDAFFE00E9D13F /* AOHomeController.m in Sources */,
+				F3249C521803EDEF00BF9E04 /* EGOImageLoader.m in Sources */,
+				F3249C501803EDEF00BF9E04 /* EGOImageButton.m in Sources */,
 				F37B87BD17FDAC2700E9D13F /* AOAppDelegate.m in Sources */,
+				F3249C531803EDEF00BF9E04 /* EGOImageView.m in Sources */,
 				F37B87B917FDAC2700E9D13F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,7 +84,8 @@
 
 @interface AOHomeViewController ()
 {
-    NSUInteger bgIndex;
+    NSUInteger      _bgIndex;
+    BOOL            _useDistantBackgroundImages;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *backgrounds;
@@ -92,6 +93,7 @@
 
 @property (retain, nonatomic) NSTimer *timer;
 @property (retain, nonatomic) NSMutableArray *bgImages;
+@property (retain, nonatomic) NSMutableArray *placeholderImages;
 @property (retain, nonatomic) NSMutableArray *medallions;
 
 @property (assign, nonatomic) NSTimeInterval panDuration;
@@ -106,7 +108,8 @@
     self = [super init];
     if (self)
     {
-        bgIndex = 0;
+        _bgIndex = 0;
+        _useDistantBackgroundImages = NO;
         
         self.panDuration = 7.0f;
         self.panSize = 10;
@@ -124,6 +127,18 @@
         
         self.bgImages = [NSMutableArray arrayWithArray:images];
         self.medallions = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andDistantBackgroundImages:(NSArray *)images withPlaceholder:(NSArray *)placeholders
+{
+    self = [self initWithPanDuration:panDuration withPanSize:panSize andBackgroundImages:images];
+    if (self)
+    {
+        _useDistantBackgroundImages = YES;
+        
+        self.placeholderImages = [NSMutableArray arrayWithArray:placeholders];
     }
     return self;
 }
@@ -170,11 +185,11 @@
 
 - (UIImage *)getCurrentBackgroundImage
 {
-    CGRect frame = [[[self.backgrounds viewWithTag:(10 + bgIndex)].layer presentationLayer] frame];
-    [[self.backgrounds viewWithTag:(10 + bgIndex)].layer removeAllAnimations];
-    [[self.backgrounds viewWithTag:(10 + bgIndex)] setFrame:frame];
+    CGRect frame = [[[self.backgrounds viewWithTag:(10 + _bgIndex)].layer presentationLayer] frame];
+    [[self.backgrounds viewWithTag:(10 + _bgIndex)].layer removeAllAnimations];
+    [[self.backgrounds viewWithTag:(10 + _bgIndex)] setFrame:frame];
    
-    return [UIImage generatePNGFromView:[self.backgrounds viewWithTag:(10 + bgIndex)]];
+    return [UIImage generatePNGFromView:[self.backgrounds viewWithTag:(10 + _bgIndex)]];
 }
 
 - (void)startBackgroundAnimation
@@ -240,7 +255,7 @@
 
 - (void)setupBackgrounds
 {
-    bgIndex = 0;
+    _bgIndex = 0;
     
     for (id v in [self.backgrounds subviews])
         [v removeFromSuperview];
@@ -248,7 +263,10 @@
     int n = 0;
     for (NSString *i in self.bgImages)
     {
-        UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:i]];
+        EGOImageView *bg = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:[self.placeholderImages objectAtIndex:n]] delegate:self];
+        
+        if (_useDistantBackgroundImages) [bg setImageURL:[NSURL URLWithString:i]];
+        else [bg setImage:[UIImage imageNamed:i]];
         
         [bg setBackgroundColor:[UIColor clearColor]];
         [bg setTag:10 + n];
@@ -315,7 +333,7 @@
           
                           completion:^(BOOL completed) {
                               
-                              if (completed) bgIndex++;
+                              if (completed) _bgIndex++;
                           }];
      }];
     
@@ -324,7 +342,7 @@
 
 - (void)animateBackground:(id)sender
 {
-    if (bgIndex >= [self.bgImages count]) bgIndex = 0;
+    if (_bgIndex >= [self.bgImages count]) _bgIndex = 0;
     
     [UIView animateWithDuration:0.25 delay:0.0
                         options:UIViewAnimationOptionAllowUserInteraction
@@ -335,11 +353,11 @@
          {
              [self resetBackgroundImagePosition];
              
-             CGRect frame = [[self.backgrounds viewWithTag:(10 + bgIndex)] frame];
-             frame.origin.x = (self.view.frame.size.width + self.panSize) * bgIndex;
-             [[self.backgrounds viewWithTag:(10 + bgIndex)] setFrame:frame];
+             CGRect frame = [[self.backgrounds viewWithTag:(10 + _bgIndex)] frame];
+             frame.origin.x = (self.view.frame.size.width + self.panSize) * _bgIndex;
+             [[self.backgrounds viewWithTag:(10 + _bgIndex)] setFrame:frame];
              
-             [self.backgrounds setContentOffset:CGPointMake((self.view.frame.size.width * bgIndex) + (bgIndex * self.panSize), 0.0f) animated:NO];
+             [self.backgrounds setContentOffset:CGPointMake((self.view.frame.size.width * _bgIndex) + (_bgIndex * self.panSize), 0.0f) animated:NO];
          }
          
          [UIView animateWithDuration:0.25 delay:0.0
@@ -357,15 +375,15 @@
                              options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveLinear
                           animations:^{
                               
-                              CGRect frame = [[self.backgrounds viewWithTag:(10 + bgIndex)] frame];
+                              CGRect frame = [[self.backgrounds viewWithTag:(10 + _bgIndex)] frame];
                               frame.origin.x -= self.panSize;
-                              [[self.backgrounds viewWithTag:(10 + bgIndex)] setFrame:frame];
+                              [[self.backgrounds viewWithTag:(10 + _bgIndex)] setFrame:frame];
                               
                           }
           
                           completion:^(BOOL completed) {
                               
-                              if (completed) bgIndex++;
+                              if (completed) _bgIndex++;
                           }];
      }];
 }
@@ -414,6 +432,20 @@
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(newMedallionTapped)])
         [self.delegate performSelector:@selector(newMedallionTapped)];
+}
+
+#pragma mark - EGOImageView delegate
+
+- (void)imageViewLoadedImage:(EGOImageView *)imageView
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidLoad:)])
+        [self.delegate performSelector:@selector(backgroundImageDidLoad:) withObject:self];
+}
+
+- (void)imageViewFailedToLoadImage:(EGOImageView *)imageView error:(NSError*)error
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidFailLoad:withError:)])
+        [self.delegate performSelector:@selector(backgroundImageDidFailLoad:withError:) withObject:self withObject:error];
 }
 
 @end
