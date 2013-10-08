@@ -6,7 +6,7 @@ AOHome is under MIT Licence so if you find it helpful just use it !
 
 This project help create clean application home view controller with block based animation for background images. You can also choose between NSBundle images or distant images with placeholder while image being downloaded.
 
-The AOMedallionView inherit from AGMedallionView library to add user interaction and delegate method available.
+The AOMedallionView inherit from AGMedallionView library to add user interaction and delegate method.
 
 https://github.com/arturgrigor/AGMedallionView
 
