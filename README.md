@@ -8,7 +8,11 @@ This project add/remove tag with image and title inside a tag list view. When us
 
 The AOMedallionView inherit from AGMedallionView library to add user interaction and delegate method available.
 
-https://github.com/arturgrigor/AGMedallionView.git
+https://github.com/arturgrigor/AGMedallionView
+
+Distant background images is using the EGOImageLoader library.
+
+https://github.com/enormego/EGOImageLoading
 
 ###**Screenshot:**
 AOHomeDemo in the iphone simulator
@@ -24,6 +28,22 @@ Sample project show a simple usage.
 ```objc
 
 @protocol AOHomeViewControllerDelegate <NSObject>
+
+@optional
+
+/**
+ * Called when a distant background image did load
+ */
+
+- (void)backgroundImageDidLoad:(AOHomeViewController *)bgImage;
+
+/**
+ * Called when a distant background image did fail load
+ */
+
+- (void)backgroundImageDidFailLoad:(AOHomeViewController *)bgImage withError:(NSError *)error;
+
+@required
 
 /**
  * Called when a new profile medallion is being tapped
@@ -50,6 +70,19 @@ Sample project show a simple usage.
  */
 
 - (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images;
+
+/**
+ * Custom init method to create a new AOHomeViewController object
+ *
+ * @param NSTimeInterval background image pan effect duration
+ * @param NSUInteger background image pan effect size
+ * @param NSArray collection of distant background images NSURL (ie. @[@"http://www.flickr.com/photos/uberdogleg/10141188454/in/explore-2013-10-07", @"http://www.flickr.com/photos/johnhemphoto/10138801736/in/explore-2013-10-07", @"http://www.flickr.com/photos/cherco/10134978246/in/explore-2013-10-07"])
+ * @param NSArray collection of plaholder images defined with images bundle name (ie. @[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg"])
+ *
+ * @return AOHomeViewController
+ */
+
+- (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andDistantBackgroundImages:(NSArray *)images withPlaceholder:(NSArray *)placeholders;
 
 /**
  * Add a medallion 
@@ -132,7 +165,7 @@ Sample project show a simple usage.
                        userInfo:@{@"image":[UIImage imageNamed:@"tyrion.jpg"], @"Name": @"Tyrion Lannister"}];
 }
 
-// Finally implement the delegate methods
+// Also implement the delegate methods
 
 - (void)newMedallionTapped
 {
@@ -143,6 +176,28 @@ Sample project show a simple usage.
 {
     NSLog(@"Medallion profile touched up! > %@", userInfo);
 }
+
+- (void)backgroundImageDidLoad:(AOHomeViewController *)bgImage
+{
+    NSLog(@"background image did load");
+}
+
+- (void)backgroundImageDidFailLoad:(AOHomeViewController *)bgImage withError:(NSError *)error
+{
+    NSLog(@"background image load did fail with error > %@", error);
+}
+
+// Finally load your Home view controller
+// Using NSBundle background images
+AOHomeController *vc = [[AOHomeController alloc] initWithPanDuration:7.0f
+                                                             withPanSize:10
+                                                     andBackgroundImages:@[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg", @"bg_4.jpg", @"bg_5.jpg"]];
+    
+// or using distant background images
+AOHomeController *vc = [[AOHomeController alloc] initWithPanDuration:7.0f
+                                                             withPanSize:10
+                                                     andDistantBackgroundImages:@[@"http://www.hdwallpapersart.com/wp-content/uploads/2013/06/rainy-paris-iphone-5-wallpaper.jpg", @"http://cdn.crazyleafdesign.com/blog/wp-content/uploads/2012/10/iphone-5-wallpaper-rain-drops.jpg", @"http://blogigoldhouse.com/wp-content/uploads/2012/12/Abstract-iPhone-5-wallpaper-igoldhouse.com_.jpg"]
+                                                            withPlaceholder:@[@"bg_1.jpg", @"bg_2.jpg", @"bg_3.jpg"]];
 ```
 
 Any comments are welcomed
