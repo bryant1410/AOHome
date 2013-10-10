@@ -19,7 +19,8 @@ AOHomeDemo in the iphone simulator
 
 ![ScreenShot](http://public.appsido.com/iPhone/public/AOHome/AOHomeScreen_1.0.png)
 
-See video here : http://public.appsido.com/iPhone/public/AOHome/AOHome.gif
+###**Video:**
+http://public.appsido.com/iPhone/public/AOHome/AOHome.mp4
 
 ##How To Use It
 
