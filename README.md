@@ -17,7 +17,7 @@ https://github.com/enormego/EGOImageLoading
 ###**Screenshot:**
 AOHomeDemo in the iphone simulator
 
-![ScreenShot](http://public.appsido.com/iPhone/public/AOHome/AOHome.gif)
+![ScreenShot](AOHome.gif)
 
 ##How To Use It
 
