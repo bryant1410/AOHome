@@ -18,7 +18,6 @@ https://github.com/enormego/EGOImageLoading
 AOHomeDemo in the iphone simulator
 
 ![AOHomeDemo in the simulator][1]
-![AOHomeDemo in the simulator video][2]
 
 ##How To Use It
 
@@ -206,5 +205,4 @@ Any comments are welcomed
 @Appsido
 contact@appsido.com
 
- [1]:http://public.appsido.com/iPhone/public/AOHome/AOHomeScreen_1.0.png
- [2]:http://public.appsido.com/iPhone/public/AOHome/AOHome.m4v
+ [1]:http://public.appsido.com/iPhone/public/AOHome/AOHome.gif
