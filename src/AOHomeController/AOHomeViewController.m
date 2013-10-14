@@ -103,9 +103,9 @@
 
 @implementation AOHomeViewController
 
-- (instancetype)init
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super init];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
         _bgIndex = 0;
@@ -119,7 +119,7 @@
 
 - (instancetype)initWithPanDuration:(NSTimeInterval)panDuration withPanSize:(NSUInteger)panSize andBackgroundImages:(NSArray *)images
 {
-    self = [self init];
+    self = [self initWithNibName:@"AOHomeViewController" bundle:nil];
     if (self)
     {
         self.panDuration = panDuration;

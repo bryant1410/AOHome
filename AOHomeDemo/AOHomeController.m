@@ -36,7 +36,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        [self setDelegate:self];
+        
     }
     return self;
 }
@@ -44,6 +44,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setDelegate:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated

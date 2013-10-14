@@ -37,7 +37,6 @@
 		F37B882017FDAF2400E9D13F /* defaultProfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FE17FDAF2300E9D13F /* defaultProfil.png */; };
 		F37B882117FDAF2400E9D13F /* defaultProfil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F37B87FF17FDAF2300E9D13F /* defaultProfil@2x.png */; };
 		F37B883417FDAFFE00E9D13F /* AOHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883217FDAFFD00E9D13F /* AOHomeController.m */; };
-		F37B883517FDAFFE00E9D13F /* AOHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37B883317FDAFFE00E9D13F /* AOHomeController.xib */; };
 		F37B883917FDB0C500E9D13F /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883817FDB0C500E9D13F /* AGMedallionView.m */; };
 		F37B883F17FDB36D00E9D13F /* AOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B883D17FDB36D00E9D13F /* AOHomeViewController.m */; };
 		F37B884017FDB36D00E9D13F /* AOHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37B883E17FDB36D00E9D13F /* AOHomeViewController.xib */; };
@@ -97,7 +96,6 @@
 		F37B87FF17FDAF2300E9D13F /* defaultProfil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultProfil@2x.png"; sourceTree = "<group>"; };
 		F37B883117FDAFFD00E9D13F /* AOHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOHomeController.h; sourceTree = "<group>"; };
 		F37B883217FDAFFD00E9D13F /* AOHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOHomeController.m; sourceTree = "<group>"; };
-		F37B883317FDAFFE00E9D13F /* AOHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOHomeController.xib; sourceTree = "<group>"; };
 		F37B883717FDB0C500E9D13F /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
 		F37B883817FDB0C500E9D13F /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
 		F37B883C17FDB36D00E9D13F /* AOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOHomeViewController.h; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				F37B87BC17FDAC2700E9D13F /* AOAppDelegate.m */,
 				F37B883117FDAFFD00E9D13F /* AOHomeController.h */,
 				F37B883217FDAFFD00E9D13F /* AOHomeController.m */,
-				F37B883317FDAFFE00E9D13F /* AOHomeController.xib */,
 				F37B87EB17FDAF2300E9D13F /* Images */,
 				F37B87E717FDAE1B00E9D13F /* Vendor */,
 				F37B87B317FDAC2700E9D13F /* Supporting Files */,
@@ -390,7 +387,6 @@
 				F37B881917FDAF2400E9D13F /* bg_2@2x.jpg in Resources */,
 				F37B881D17FDAF2400E9D13F /* bg_4@2x.jpg in Resources */,
 				F37B884017FDB36D00E9D13F /* AOHomeViewController.xib in Resources */,
-				F37B883517FDAFFE00E9D13F /* AOHomeController.xib in Resources */,
 				F37B87B717FDAC2700E9D13F /* InfoPlist.strings in Resources */,
 				F37B881817FDAF2400E9D13F /* bg_2.jpg in Resources */,
 				F37B882117FDAF2400E9D13F /* defaultProfil@2x.png in Resources */,
