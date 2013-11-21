@@ -25,7 +25,6 @@
 
 #import <UIKit/UIKit.h>
 #import "AGMedallionView.h"
-#import "EGOImageView.h"
 
 @class AOHomeViewController;
 
@@ -67,7 +66,7 @@
 
 @end
 
-@interface AOHomeViewController : UIViewController <EGOImageViewDelegate>
+@interface AOHomeViewController : UIViewController
 
 /**
  * Scroll view that hold all defined background images

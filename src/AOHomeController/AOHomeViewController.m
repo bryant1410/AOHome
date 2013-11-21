@@ -263,14 +263,24 @@
     int n = 0;
     for (NSString *i in self.bgImages)
     {
-        EGOImageView *bg = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:[self.placeholderImages objectAtIndex:n]] delegate:self];
-        
-        if (_useDistantBackgroundImages) [bg setImageURL:[NSURL URLWithString:i]];
+        UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f + (self.view.frame.size.width * n) + (self.panSize * n), 0.0f, self.view.frame.size.width + self.panSize, self.view.frame.size.height)];
+        if (_useDistantBackgroundImages)
+        {
+            [bg setImageWithURL:[NSURL URLWithString:i]
+               placeholderImage:[UIImage imageNamed:[self.placeholderImages objectAtIndex:n]]
+                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+                
+                          if (!error && self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidLoad:)])
+                              [self.delegate performSelector:@selector(backgroundImageDidLoad:) withObject:self];
+                          
+                          if (error && self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidFailLoad:withError:)])
+                              [self.delegate performSelector:@selector(backgroundImageDidFailLoad:withError:) withObject:self withObject:error];
+            }];
+        }
         else [bg setImage:[UIImage imageNamed:i]];
         
         [bg setBackgroundColor:[UIColor clearColor]];
         [bg setTag:10 + n];
-        [bg setFrame:CGRectMake(0.0f + (self.view.frame.size.width * n) + (self.panSize * n), 0.0f, self.view.frame.size.width + self.panSize, self.view.frame.size.height)];
         [self.backgrounds addSubview:bg];
         
         n++;
@@ -432,20 +442,6 @@
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(newMedallionTapped)])
         [self.delegate performSelector:@selector(newMedallionTapped)];
-}
-
-#pragma mark - EGOImageView delegate
-
-- (void)imageViewLoadedImage:(EGOImageView *)imageView
-{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidLoad:)])
-        [self.delegate performSelector:@selector(backgroundImageDidLoad:) withObject:self];
-}
-
-- (void)imageViewFailedToLoadImage:(EGOImageView *)imageView error:(NSError*)error
-{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(backgroundImageDidFailLoad:withError:)])
-        [self.delegate performSelector:@selector(backgroundImageDidFailLoad:withError:) withObject:self withObject:error];
 }
 
 @end
