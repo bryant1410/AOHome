@@ -25,63 +25,6 @@
 
 #import "AOHomeViewController.h"
 
-@implementation UIImage (AOImageCategory)
-
-+ (UIImage *)generatePNGFromView:(UIView *)aView
-{
-    UIImage *image = nil;
-    
-    UIGraphicsBeginImageContextWithOptions(aView.frame.size, NO, [[UIScreen mainScreen] scale]);
-    {
-        [[aView layer] renderInContext:UIGraphicsGetCurrentContext()];
-        image = UIGraphicsGetImageFromCurrentImageContext();
-    }
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
-
-@end
-
-@interface AOMedallionView : AGMedallionView
-
-@property (nonatomic, strong) UIButton *medallion;
-@property (nonatomic, strong) NSString *profileName;
-
-@end
-
-@implementation AOMedallionView
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self)
-    {
-        self.medallion = [UIButton buttonWithType:UIButtonTypeCustom];
-    }
-    return self;
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    [super drawRect:rect];
-    
-    UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(0.0, self.frame.size.height, self.frame.size.width, 30.0f) ];
-    [name setBackgroundColor:[UIColor clearColor]];
-    [name setShadowColor:[UIColor blackColor]];
-    [name setShadowOffset:CGSizeMake(1, 1)];
-    [name setTextAlignment:NSTextAlignmentCenter];
-    [name setTextColor:[UIColor whiteColor]];
-    [name setText:self.profileName];
-    [self addSubview:name];
-    
-    [self.medallion setBackgroundColor:[UIColor clearColor]];
-    [self.medallion setFrame:CGRectMake(0.0, 0.0f, self.frame.size.width, self.frame.size.height)];
-    [self addSubview:self.medallion];
-}
-
-@end
-
 @interface AOHomeViewController ()
 {
     NSUInteger      _bgIndex;

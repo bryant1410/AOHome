@@ -28,12 +28,6 @@
 
 @class AOHomeViewController;
 
-@interface UIImage (AOImageCategory)
-
-+ (UIImage *)generatePNGFromView:(UIView *)aView;
-
-@end
-
 @protocol AOHomeViewControllerDelegate <NSObject>
 
 @optional
