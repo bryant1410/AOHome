@@ -1,8 +1,8 @@
-#AOHome - Out of the box home application
+# AOHome - Out of the box home application
 
 AOHome is under MIT Licence so if you find it helpful just use it !
 
-###**AOHomeDemo**
+### **AOHomeDemo**
 
 This project help create clean application home view controller with block based animation for background images. You can also choose between NSBundle images or distant images with placeholder while image being downloaded.
 
@@ -14,19 +14,19 @@ Distant background images is using the EGOImageLoader library.
 
 https://github.com/enormego/EGOImageLoading
 
-###**Screenshot:**
+### **Screenshot:**
 AOHomeDemo in the iphone simulator
 
 ![ScreenShot](http://public.appsido.com/iPhone/public/AOHome/AOHomeScreen_1.0.png)
 
-###**Video:**
+### **Video:**
 http://public.appsido.com/iPhone/public/AOHome/AOHome.mp4
 
-##How To Use It
+## How To Use It
 
 Sample project show a simple usage.
 
-###Documentation
+### Documentation
 
 ```objc
 
@@ -126,7 +126,7 @@ Sample project show a simple usage.
     
 ```
 
-###Code snippet
+### Code snippet
 
 ```objc
 // First create a new view controller class that inherit from AOHomeViewController class and define the new controller conform to AOHomeViewController delegate protocol. Do not forget to import the AOHomeViewController interface
